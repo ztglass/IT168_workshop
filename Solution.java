@@ -1,79 +1,112 @@
 public class Solution {
+    
     public static void main(String[] args) {
         
-        // 1) Write a for loop that prints out "IT 168" seven times.
+        // 1) Write a nested for loop to print out a rectangle
+        //    of 6 rows and 8 columns with the character " * ".
 
-        for (int i = 0; i < 7; i++){
-            System.out.println("IT 168");
+        for (int a = 0; a < 6; a++){
+            for (int b = 0; b < 8; b++){
+                System.out.print("*");
+            }
+            System.out.println("");
         }
 
 
 
 
-        // 2) What does the following for loop output?
-        //    If the code does not work, what changes must be made
-        //    for it to work?
-        for (int i = 20; i > 0; i -= 2){
-            System.out.println(i % 3);
+
+
+
+
+        // 2) What will the following code output?
+        //    If the code does not work, what changes
+        //    must be made for it to work?
+        for (int a = 0; a < 5; a++){
+            for (int b = 7; b > 0; b++){
+                System.out.print("$");
+            }
+            System.out.println("");
         }
+
 
         /*
-         * 2
-         * 0
-         * 1
-         * 2
-         * 0
-         * 1
-         * 2
-         * 0
-         * 1
-         * 2
-         */
-
-
-
-        // 3) Write a sentinel-controlled while loop that counts backwards
-        //    from 15, printing all multiples of 3 until the count reaches 7.
-        int a = 15;
-        while (a == 7){
-            if (a % 3 == 0){
-                System.out.println(a);
-            }
-            a--;
-        }
-
-
-
-
-        // 4) What does the following while loop output?
-        //    If the code does not work, what changes must be made
-        //    for it to work?
-        boolean flag = false;
-        int b = 7;
-        while (!flag){
-            if (b == 21 % 3){
-                System.out.println("21 % 3 = " + 21 % 3);
-            }
-            else{
-                b--;
-            }
-        }
-
-        /*
-         *      The code does not work. The condition for the while loop is
-         * never changed within the loop itself, and will run infinitely.
+         * Will not work. The inner for loop, with the condition
+         * b = 7; b > 0; b++
+         * will run forever, as b will never be less than or equal to 0.
          * 
-         *      To remedy this, you must put:
-         *    flag = true;
-         *      under System.out.println().
-         * 
-         *      Once b = 0, the if statement's condition (b == 21 % 3) is true,
-         * and runs.
+         * To resolve, change b++ to b--.
          */
 
 
 
 
 
+        // 3) Write a nested for loop to print out all 52 cards
+        //    in a standard 52-card deck.
+
+        String suit = "";
+        for (int a = 0; a < 4; a++){
+            for (int b = 1; b < 14; b++){
+                switch (a){
+                    case 0:
+                        suit = "Hearts";
+                        break;
+                    case 1:
+                        suit = "Clubs";
+                        break;
+                    case 2:
+                        suit = "Diamonds";
+                        break;
+                    case 3:
+                        suit = "Spades";
+                        break;
+                }
+                switch (b){
+                    case 1:
+                        System.out.println("Ace of " + suit);
+                        break;
+                    case 11:
+                        System.out.println ("Jack of " + suit);
+                        break;
+                    case 12:
+                        System.out.println("Queen of " + suit);
+                        break;
+                    case 13:
+                        System.out.println("King of " + suit);
+                        break;
+                    default:
+                        System.out.println( b + " of " + suit);
+                }
+            }
+        }
+
+
+
+
+
+        // 4) What will the following code output?
+        //    If the code does not work, what changes
+        //    must be made for it to work?
+        for (int a = 1; a < 4; a++){
+            for (int b = 5; b > 0; b--){
+                if ((a * b) % 2 == 0){
+                    System.out.println(a * b);
+                }
+            }
+        }
+
+
+        /*
+         * 4
+         * 2
+         * 10
+         * 8
+         * 6
+         * 4
+         * 2
+         * 12
+         * 6
+         */
     }
 }
