@@ -1,68 +1,79 @@
-import java.util.Scanner;
-
 public class Solution {
     public static void main(String[] args) {
         
-        Scanner scan = new Scanner(System.in);
+        // 1) Write a for loop that prints out "IT 168" seven times.
 
-        // 1) Create an instance of Produce named Alpha with the name "Jones' Family Farm",
-        //produce type of "Corn", and an initial amount of 125 pounds.
-
-        Produce Alpha = new Produce("Jones' Family Farm", "Corn", 125);
-
-
-
-        // 2) Create an instance of Produce name Beta with the name "Northern Farm"
-        // with a produce type of "Peaches".
-
-        Produce Beta = new Produce ("Northern Farm", "Peaches");
-
-
-
-        // 3) Print out both farms using the toString() method.
-
-        System.out.println(Alpha.toString());
-        System.out.println(Beta.toString());
-
-
-
-        // 4) Using the appropriate methods, increase the peaches
-        // from "Northern Farm" by 250.
-
-        Beta.setAmount(Beta.getAmount() + 250);
-
-
-
-        // 5) Print out "Northern Farm" using the toString() method.
-
-        System.out.println(Beta.toString());
-
-
-
-        // 6) Using the appropriate methods, create an instance Delta with the name "ISU Farm"
-        // and with a produce type accepted by validateType(). If validateType returns false,
-        // loop until a valid type is chosen.
-
-        boolean flag = false;
-        Produce Delta = new Produce();
-        while (!flag){
-            System.out.print("Enter a produce: ");
-            String produce = scan.nextLine();
-            if (Produce.validateType(produce)){
-                Delta = new Produce("ISU Farm", produce);
-                flag = true;
-            }
+        for (int i = 0; i < 7; i++){
+            System.out.println("IT 168");
         }
 
 
-        // Print out "ISU Farm" using the toString() method, increase the amount by 50,
-        // then print again.
-
-        System.out.println(Delta.toString());
-        Delta.setAmount(Delta.getAmount() + 50);
-        System.out.println(Delta.toString());
 
 
-        scan.close();
+        // 2) What does the following for loop output?
+        //    If the code does not work, what changes must be made
+        //    for it to work?
+        for (int i = 20; i > 0; i -= 2){
+            System.out.println(i % 3);
+        }
+
+        /*
+         * 2
+         * 0
+         * 1
+         * 2
+         * 0
+         * 1
+         * 2
+         * 0
+         * 1
+         * 2
+         */
+
+
+
+        // 3) Write a sentinel-controlled while loop that counts backwards
+        //    from 15, printing all multiples of 3 until the count reaches 7.
+        int a = 15;
+        while (a == 7){
+            if (a % 3 == 0){
+                System.out.println(a);
+            }
+            a--;
+        }
+
+
+
+
+        // 4) What does the following while loop output?
+        //    If the code does not work, what changes must be made
+        //    for it to work?
+        boolean flag = false;
+        int b = 7;
+        while (!flag){
+            if (b == 21 % 3){
+                System.out.println("21 % 3 = " + 21 % 3);
+            }
+            else{
+                b--;
+            }
+        }
+
+        /*
+         *      The code does not work. The condition for the while loop is
+         * never changed within the loop itself, and will run infinitely.
+         * 
+         *      To remedy this, you must put:
+         *    flag = true;
+         *      under System.out.println().
+         * 
+         *      Once b = 0, the if statement's condition (b == 21 % 3) is true,
+         * and runs.
+         */
+
+
+
+
+
     }
 }

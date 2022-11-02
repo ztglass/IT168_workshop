@@ -1,58 +1,43 @@
-import java.util.Scanner;
-
-public class Driver{
+public class Driver {
     public static void main(String[] args) {
         
-        Scanner scan = new Scanner(System.in);
-
-        // 1) Create an instance of Produce named Alpha with the name "Jones' Family Farm",
-        //produce type of "Corn", and an initial amount of 125 pounds.
+        // 1) Write a for loop that prints out "IT 168" seven times.
 
 
 
 
 
-        // 2) Create an instance of Produce named Beta with the name "Northern Farm"
-        // with a produce type of "Peaches".
+        // 2) What does the following for loop output?
+        //    If the code does not work, what changes must be made
+        //    for it to work?
+        for (int i = 20; i > 0; i -= 2){
+            System.out.println(i % 3);
+        }
 
 
 
 
 
-        // 3) Print out both farms using the toString() method.
+        // 3) Write a sentinel-controlled while loop that counts backwards
+        //    from 15, printing all multiples of 3 until the count reaches 7.
 
 
 
 
 
-        // 4) Using the appropriate methods, increase the peaches
-        // from "Northern Farm" by 250.
-
-
-
-
-
-        // 5) Print out "Northern Farm" using the toString() method.
-
-
-
-
-
-        // 6) Using the appropriate methods, create an instance Delta with the name "ISU Farm"
-        // and with a produce type accepted by validateType(). If validateType returns false,
-        // loop until a valid type is chosen.
-
-
-
-
-
-        // 7) Print out "ISU Farm" using the toString() method, increase the amount by 50,
-        // then print again.
-
-
-
-
-
-        scan.close();
+        // 4) What does the following while loop output?
+        //    If the code does not work, what changes must be made
+        //    for it to work?
+        boolean flag = false;
+        int b = 7;
+        while (!flag){
+            if (b == 21%3){
+                System.out.println("21 % 3 = " + 21 % 3);
+            }
+            else{
+                b--;
+            }
+        }
     }
+    
 }
