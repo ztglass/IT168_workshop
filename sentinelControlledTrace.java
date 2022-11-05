@@ -14,10 +14,8 @@ public class sentinelControlledTrace {
         while(sentinel!=-999){
             sum+=sentinel;
             count++;
-            if (count>0){
-                System.out.print("Enter a number to increment the count and add to the sum (enter -999 to quit): ");
-                sentinel = scan.nextInt();
-            }
+            System.out.print("Enter a number to increment the count and add to the sum (enter -999 to quit): ");
+            sentinel = scan.nextInt();
         }
         System.out.println(sum + " " + count);
     }
