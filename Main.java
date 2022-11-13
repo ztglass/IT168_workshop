@@ -17,10 +17,10 @@ public class Main {
         teacherList[2] = vanderhorn;
 
 
-        Student tamasha = new Student(1,"Tamasha",4);
-        Student rakshith = new Student(2,"Rakshith Vasudev",12);
-        Student rabbi = new Student(3,"Rabbi",5);
-        Student[] studentList = new Student[3];
+        K_Student tamasha = new K_Student(1,"Tamasha",4);
+        K_Student rakshith = new K_Student(2,"Rakshith Vasudev",12);
+        K_Student rabbi = new K_Student(3,"Rabbi",5);
+        K_Student[] studentList = new K_Student[3];
 
         studentList[0] = tamasha;
         studentList[1] = rabbi;

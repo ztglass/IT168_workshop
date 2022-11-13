@@ -9,7 +9,7 @@ package school.management.system;
  */
 public class School {
     private Teacher[] teachers = new Teacher[5];
-    private Student[] students = new Student[5];
+    private K_Student[] students = new K_Student[5];
     private int countOfTeachers = 0;
     private int countOfStudents = 0;
     private static int  totalMoneyEarned;
@@ -20,7 +20,7 @@ public class School {
      * @param teachers list of teachers in the school.
      * @param students list of students int the school.
      */
-    public School(Teacher[] teachers, Student[] students) {
+    public School(Teacher[] teachers, K_Student[] students) {
         this.teachers = teachers;
         this.students = students;
         totalMoneyEarned=0;
@@ -53,7 +53,7 @@ public class School {
      *
      * @return the list of students in the school.
      */
-    public Student[] getStudents() {
+    public K_Student[] getStudents() {
         return students;
     }
 
@@ -61,7 +61,7 @@ public class School {
      * Adds a student to the school
      * @param student the student to be added.
      */
-    public void addStudent(Student student) {
+    public void addStudent(K_Student student) {
         if (countOfStudents == teachers.length)
         {
             students = resizeStudent();
@@ -83,9 +83,9 @@ public class School {
         return temp;
     }
 
-    private Student[] resizeStudent()
+    private K_Student[] resizeStudent()
     {
-        Student[] temp = new Student[countOfStudents * 2];
+        K_Student[] temp = new K_Student[countOfStudents * 2];
 
         for (int i = 0; i < countOfStudents; i++)
         {
